@@ -1,6 +1,6 @@
 ﻿const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "-"
+const prefix = "$"
 
 console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
 console.log('         [Wait please .. ]       ')
@@ -27,7 +27,7 @@ client.on('ready', () => {
   console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
   console.log(`channels! [ " ${client.channels.size} " ]`);
   console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
-  client.user.setGame(`${prefix}help-br`)
+  client.user.setGame(`${prefix}help`)
 });
 
  
@@ -36,16 +36,15 @@ client.on('message', message => {
     let command = messageArray[0];
     
     
-    if (command === `${prefix}help-br`) {
+    if (command === `${prefix}help`) {
 			let embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
                 .addField('     **=-=-:: [ Bc Bot ] ::-=-=** ' ,'╔[❖═════════════════════❖]╗')
 				.addField(`**${prefix}bc | رسالة جماعية لجميع الاعضاء**'` ,'**=-=-=-=-=-=-=-=-=-=-=**')
 				.addField(`**${prefix}bco | رسالة جماعية للاونلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
 				.addField(`**${prefix}bcf | رسالة جماعية للوفلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
-				.addField(`**${prefix}bcrole | رسالة جماعية لرتبة معينه**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
                 .addField('=-=- [ شكرا على استعمال البوت ] -=-= ' ,'╚[❖═════════════════════❖]╝')
-                .setFooter(`By ixVolBiNa`)
+                .setFooter(`By SilEnT.`)
                 .setTimestamp()
 			
                 message.author.sendEmbed(embed)
@@ -100,7 +99,7 @@ client.on("message", message => {//bc3
 
 client.on('message' , message => {//bcrole
   if(message.author.bot) return;
-  if(message.content.startsWith(prefix + "bcrole")) {
+  if(message.content.startsWith(prefix + "bcrorfeerwdf")) {
     let args = message.content.split(" ").slice(1);
 
     if(!args[0]) {
@@ -137,7 +136,7 @@ client.on('message' , message => {//bcrole
     }
 });
 
-const developers = ["587783907563536404","id"]
+const developers = ["517956585839132682","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
